@@ -6,13 +6,11 @@ import Sidebar from "./sidebar";
 import Body from "./body";
 import Mobile from "./mobile";
 
+
 function App(){
     return (
         <div>
             <Header />
-            <Stories />
-            <Posts />
-            <Sidebar />
             <Body />
             <Mobile />
         </div>
