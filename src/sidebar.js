@@ -1,16 +1,16 @@
 export default function Sidebar(props) {
   return (
     <div class="sidebar">
-        <User user="catanacomics" userName="Catana" />
+        <User user="catanacomics" username="Catana" />
         <Sugestions />
 
-        <div class="links">
+    <div class="links">
             Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos •
             Localizações • Contas mais relevantes • Hashtags • Idioma
-        </div>
-        <div class="copyright">
+    </div>
+    <div class="copyright">
             © 2022 INSTAGRAM DO FACEBOOK
-        </div>
+    </div>
     </div>
   )
   }
@@ -28,7 +28,7 @@ export default function Sidebar(props) {
         <div class="seguir">Seguir</div>
     </div>
    )
-  }
+   }
 
    function Sugestions() {
     const sugestions = [
@@ -50,8 +50,8 @@ export default function Sidebar(props) {
    )
    }
 
-  function User(props) {
-   return (
+   function User(props) {
+    return (
     <div class="usuario">
       <img src="./assets/img/catanacomics.svg"/>
         <div class="texto">

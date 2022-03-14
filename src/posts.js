@@ -3,12 +3,12 @@ import Icons from "./Icons"
    export default function Posts() {
     const allPosts = [
       {user: "meowed",
-       pic: "/assets/img/gato-telefone.svg", 
+       pic: "gato-telefone", 
        likedBy: "respondeai", 
        likedQnt: "101.523"},
 
       {user: "barked", 
-      pic: "assets/img/dog.svg", 
+      pic: "dog", 
       likedBy: "adorable_animals", 
       likedQnt: "99.159"},
    ]
@@ -30,14 +30,6 @@ import Icons from "./Icons"
           <div class="acoes">
               <Icons IconName="ellipsis-horizontal"/>
           </div>
-      </div>
-    )
-    }
-
-    function Pic({pic}) {
-      return (
-      <div class="conteudo">
-          <img src={`${pic}`}/>
       </div>
     )
     }
@@ -68,11 +60,19 @@ import Icons from "./Icons"
     )
     }
 
+    function Pic({pic}) {
+      return (
+      <div class="conteudo">
+          <img src={`./assets/img/${pic}.svg`}/>
+      </div>
+    )
+    }
+
      function Post({user, pic, likedBy, likedQnt}) {
        return (
         <div class="post">
           <User user={user}/>
-          <Pic picture={pic}/>
+          <Pic img={pic}/>
           <div class="fundo">
             <Icon />
             <Likes likedBy={likedBy} likedQnt={likedQnt}/>
