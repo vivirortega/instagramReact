@@ -2,8 +2,15 @@ import Icons from "./Icons"
 
    export default function Posts() {
     const allPosts = [
-      {user: "meowed", pic: "assets/img/gato-telefone.svg", likedBy: "respondeai", likedQnt: "101.523"},
-      {user: "barked", pic: "assets/img/dog.svg", likedBy: "adorable_animals", likedQnt: "99.159"},
+      {user: "meowed",
+       pic: "/assets/img/gato-telefone.svg", 
+       likedBy: "respondeai", 
+       likedQnt: "101.523"},
+
+      {user: "barked", 
+      pic: "assets/img/dog.svg", 
+      likedBy: "adorable_animals", 
+      likedQnt: "99.159"},
    ]
     return (
       <div class="posts">
@@ -30,17 +37,17 @@ import Icons from "./Icons"
     function Pic({pic}) {
       return (
       <div class="conteudo">
-          <img src={pic}/>
+          <img src={`${pic}`}/>
       </div>
     )
     }
 
-    function Actions() {
-     const icons = ["heart-outline", "chatbubble-outline", "paper-plane-outline"]
+    function Icon() {
+     const allIcons = ["heart-outline", "chatbubble-outline", "paper-plane-outline"]
      return (
       <div class="acoes">
           <div>
-              {icons.map(icon => <Icons IconName={icon}/>)}
+              {allIcons.map(icon => <Icons IconName={icon}/>)}
           </div>
           <div>
               <Icons IconName="bookmark-outline"/>
@@ -67,7 +74,7 @@ import Icons from "./Icons"
           <User user={user}/>
           <Pic picture={pic}/>
           <div class="fundo">
-            <Actions />
+            <Icon />
             <Likes likedBy={likedBy} likedQnt={likedQnt}/>
           </div>
       </div>
