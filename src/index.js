@@ -1,8 +1,5 @@
 import ReactDOM from "react-dom";
 import Header from "./header";
-import Stories from "./stories";
-import Posts from "./posts";
-import Sidebar from "./sidebar";
 import Body from "./body";
 import Mobile from "./mobile";
 

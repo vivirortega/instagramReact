@@ -1,19 +1,27 @@
+import Icons from "./Icons"
+
 export default function Stories(props) {
-    return (
-      <div class="stories">
-      <div class="story">
-        <div class="imagem">
-          <img src="assets/img/9gag.svg" />
-        </div>
-        <div class="usuario">
-          teste
-        </div>
-      </div>
+  const allUsers = ["9gag", "meowed", "barked", "nathanwpylestrangeplanet", "wawawicomics", "respondeai", "filomoderna", "memeriagourmet"];
 
-      <div class="setinha">
-        <ion-icon name="chevron-forward-circle"></ion-icon>
-      </div>
+  return (
+   <div class="stories">
+   {allUsers.map(Story)}
+    <div class="setinhanomeUsuario">
+      <Icons IconName="chevron-forward-circle" />
     </div>
+   </div>
+  )
+  }
 
-    )
-}
+ function Story(username) {
+  return (
+   <div class="story">
+    <div class="imagem">
+     <img src={`./assets/img/${username}.svg`}/>
+    </div>
+    <div class="usuario">
+      {username}
+    </div>
+   </div>
+ )
+ }
